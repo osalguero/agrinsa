@@ -1,0 +1,36 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans 'Django site admin' %}{% endblock %}
+
+{% block branding %}
+<!DOCTYPE html>
+<html lang="es"/
+    <head>
+        <meta charset="utf-8" />
+        <title>Titulo</title>
+    </head>    
+      
+  
+      <div id="centrado" style="text-align:center">
+        <header>
+            <hgroup>
+             <h1 id="site-name"> ADMINISTRACION AGRINSA S.A.</h5>
+             <script>
+             	var f=new Date();
+				cad=f.getHours()+":"+f.getMinutes()+":"+f.getSeconds(); 
+				window.status =cad;
+				setTimeout("mostrarhora()",1000); 
+				document.write(cad);
+             </script>
+           <IMG SRC="/static/img/agrinsa.gif" WIDTH=178 HEIGHT=180 >
+            		
+          </footer>
+        </div>
+    </body>
+</html>
+
+
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

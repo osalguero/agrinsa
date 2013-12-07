@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Curso Django: Las Plantillas | Maestros del Web</title>
+<meta name="description" content="Maestros del web">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script data-rocketsrc="http://static.evernote.com/noteit.js" data-rocketoptimized="true"></script><script data-rocketsrc="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.es.o9mrUL8kXxM.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTOrhqBghRq_DAbWS4NESpfnguiVag/cb=gapi.loaded_1" data-rocketoptimized="true" async=""></script><script data-rocketsrc="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.es.o9mrUL8kXxM.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTOrhqBghRq_DAbWS4NESpfnguiVag/cb=gapi.loaded_0" data-rocketoptimized="true" async=""></script><script type="text/javascript" async="" data-rocketsrc="https://apis.google.com/js/plusone.js" data-rocketoptimized="true" gapi_processed="true"></script><script id="facebook-jssdk" data-rocketsrc="//connect.facebook.net/en_US/all.js#appId=269602203058716&amp;xfbml=1" data-rocketoptimized="true"></script><script type="text/javascript" async="" src="./Curso Django  Las Plantillas   Maestros del Web_files/ga.js"></script><script type="text/javascript">
+//<![CDATA[
+window.__CF=window.__CF||{};window.__CF.AJS={"ga_key":{"ua":"UA-309831-1","ga_bs":"2"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:{profile:false},oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/acv=4125811108/"},atok:"4fba59badbb2f97c44eb9c1259fdaabc",petok:"bf17ee73006fe073414607e4ba54f090-1385427135-1800",zone:"maestrosdelweb.com",rocket:"a",apps:{"ga_key":{"ua":"UA-309831-1","ga_bs":"2"}}}];document.write('<script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/acv=616370821/cloudflare.min.js"><'+'\/script>')}}catch(e){};
+//]]>
+</script><script type="text/javascript" src="./Curso Django  Las Plantillas   Maestros del Web_files/cloudflare.min.js"></script><style type="text/css">.cf-hidden { display: none; } .cf-invisible { visibility: hidden; }</style><script data-module="cloudflare/rocket" id="cfjs_block_19db961be0" onload="CloudFlare.__cfjs_block_19db961be0_load()" onerror="CloudFlare.__cfjs_block_19db961be0_error()" onreadystatechange="CloudFlare.__cfjs_block_19db961be0_readystatechange()" type="text/javascript" src="./Curso Django  Las Plantillas   Maestros del Web_files/rocket.js"></script>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="author" href="http://www.maestrosdelweb.com/wp-content/themes/mdw4/humans.txt">
+<link rel="shortcut icon" href="http://www.maestrosdelweb.com/wp-content/themes/mdw4/imgs/favicon.ico" type="image/x-icon">
+<link rel="pingback" href="http://www.maestrosdelweb.com/xmlrpc.php">
+<link rel="alternate" type="application/rss+xml" title="Maestros del Web RSS Feed" href="http://www.maestrosdelweb.com/feed/">
+<link rel="alternate" type="application/atom+xml" title="Maestros del Web Atom Feed" href="http://www.maestrosdelweb.com/feed/atom/">
+<link rel="alternate" type="application/rss+xml" title="Maestros del Web Comentarios RSS Feed" href="http://www.maestrosdelweb.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Maestros del Web » Curso Django: Las Plantillas RSS de los comentarios" href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/feed/">
+<link rel="stylesheet" id="mailchimpSF_main_css-css" href="./Curso Django  Las Plantillas   Maestros del Web_files/saved_resource" type="text/css" media="all">
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://www.maestrosdelweb.com/wp-content/plugins/mailchimp/css/ie.css?ver=3.7.1' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="social_comments-css" href="./Curso Django  Las Plantillas   Maestros del Web_files/comments-mdw.css" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack-widgets-css" href="./Curso Django  Las Plantillas   Maestros del Web_files/widgets.css" type="text/css" media="all">
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-includes/js/jquery/jquery.js?ver=1.10.2" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.4.1" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-includes/js/jquery/jquery.form.min.js?ver=3.37.0" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketoptimized="true">
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/www.maestrosdelweb.com\/"};
+/* ]]> */
+</script>
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.4.1" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-includes/js/comment-reply.min.js?ver=3.7.1" data-rocketoptimized="true"></script>
+<link rel="prev" title="Es viernes: ¿Cuál es el precio de tu trabajo?" href="http://www.maestrosdelweb.com/editorial/cual-es-el-precio-de-tu-trabajo/">
+<link rel="next" title="Sigamos aprendiendo Python" href="http://www.maestrosdelweb.com/editorial/sigamos-aprendiendo-python/">
+<link rel="canonical" href="./Curso Django  Las Plantillas   Maestros del Web_files/Curso Django  Las Plantillas   Maestros del Web.htm">
+<link rel="shortlink" href="http://wp.me/p4t7M-6sC">
+<meta name="description" content="Esta semana tocaremos el tema de las plantillas, si antes no has tenido tiempo para seguir el curso, lo importante ...">
+<style type="text/css">img#wpstats{display:none}</style>
+ 
+<meta property="og:type" content="article">
+<meta property="og:title" content="Curso Django: Las Plantillas">
+<meta property="og:url" content="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/">
+<meta property="og:description" content="Esta semana tocaremos el tema de las plantillas, si antes no has tenido tiempo para seguir el curso, lo importante es que entiendas como funciona Django y por supuesto si no has leído el curso comp...">
+<meta property="og:site_name" content="Maestros del Web">
+<meta property="og:image" content="http://www.maestrosdelweb.com/images/2012/05/django-templates-0-317x450.jpg">
+<meta property="og:image" content="http://www.maestrosdelweb.com/images/2012/05/django-templates-1-317x450.jpg">
+<meta property="og:image" content="http://www.maestrosdelweb.com/images/2012/05/django-template-base-450x346.png">
+<meta property="og:image" content="http://www.maestrosdelweb.com/images/2012/05/django-template-inicio-450x443.png">
+<meta property="og:image" content="http://www.maestrosdelweb.com/images/2012/05/django-template-usuarios-450x369.png">
+<meta property="og:image" content="http://www.maestrosdelweb.com/images/2012/05/django-template-recetas-450x289.png">
+<meta property="og:image" content="http://www.maestrosdelweb.com/images/2012/05/django-template-receta-450x274.png">
+<meta name="twitter:site" content="@jetpack">
+<meta name="twitter:image0" content="http://www.maestrosdelweb.com/images/2012/05/django-templates-0-317x450.jpg">
+<meta name="twitter:image1" content="http://www.maestrosdelweb.com/images/2012/05/django-templates-1-317x450.jpg">
+<meta name="twitter:image2" content="http://www.maestrosdelweb.com/images/2012/05/django-template-base-450x346.png">
+<meta name="twitter:image3" content="http://www.maestrosdelweb.com/images/2012/05/django-template-inicio-450x443.png">
+<meta name="twitter:card" content="gallery">
+<link rel="stylesheet" href="./Curso Django  Las Plantillas   Maestros del Web_files/django.css" type="text/css" media="screen">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-content/themes/mdw4/scripts/jquery.scrollorama.js" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-content/themes/mdw4/scripts/jquery.slabtext.js" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketoptimized="true">var bloginfo_url="http://www.maestrosdelweb.com";var guia_actual={titulo:"django", slug:"guias-django",color:"#063b2b",etiquetas:"guias, django"};</script>
+<script type="text/rocketscript" data-rocketsrc="http://www.maestrosdelweb.com/wp-content/themes/mdw4/scripts/internas.js" data-rocketoptimized="true"></script>
+<script type="text/rocketscript" data-rocketoptimized="true">try{GS_googleAddAdSenseService("ca-pub-0070781738361811");GS_googleEnableAllServices();}catch(err){}</script>
+<script type="text/rocketscript" data-rocketoptimized="true">try{GA_googleAddSlot("ca-pub-0070781738361811", "1000x60ATF");}catch(err){}</script>
+<script type="text/rocketscript" data-rocketoptimized="true">try{GA_googleFetchAds();}catch(err){}</script>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link href="./Curso Django  Las Plantillas   Maestros del Web_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://www.maestrosdelweb.com/wp-content/themes/mdw4/css/skin-django.css">
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-309831-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+<script data-rocketsrc="http://platform.linkedin.com/js/nonSecureAnonymousFramework?v=0.0.2000-RC1.31484-1408&amp;" data-rocketoptimized="true"></script><style type="text/css">* html #li_ui_li_gen_1385427152379_0 a#li_ui_li_gen_1385427152379_0-link{height:1% !important;}#li_ui_li_gen_1385427152379_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1385427152379_0 a#li_ui_li_gen_1385427152379_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1385427152379_0 a#li_ui_li_gen_1385427152379_0-link:link, #li_ui_li_gen_1385427152379_0 a#li_ui_li_gen_1385427152379_0-link:visited, #li_ui_li_gen_1385427152379_0 a#li_ui_li_gen_1385427152379_0-link:hover, #li_ui_li_gen_1385427152379_0 a#li_ui_li_gen_1385427152379_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1385427152379_0 a#li_ui_li_gen_1385427152379_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-logo{background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) 0px -276px no-repeat !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;}#li_ui_li_gen_1385427152379_0.hovered #li_ui_li_gen_1385427152379_0-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-logo, #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-logo{}#li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1385427152379_0.hovered #li_ui_li_gen_1385427152379_0-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-title, #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title{}.IN-shadowed #li_ui_li_gen_1385427152379_0.hovered #li_ui_li_gen_1385427152379_0-title{}.IN-shadowed #li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-title, .IN-shadowed #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-title{}#li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title-text, #li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1385427152379_0.hovered #li_ui_li_gen_1385427152379_0-title-text, #li_ui_li_gen_1385427152379_0.hovered #li_ui_li_gen_1385427152379_0-title-text *{color:#000 !important;}#li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-title-text, #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-title-text, #li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-title-text *, #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-title-text *{color:#666 !important;}#li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title #li_ui_li_gen_1385427152379_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title-text, .success #li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1385427152379_0 #li_ui_li_gen_1385427152379_0-title{}.success #li_ui_li_gen_1385427152379_0.hovered #li_ui_li_gen_1385427152379_0-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1385427152379_0.hovered #li_ui_li_gen_1385427152379_0-title-text, .success #li_ui_li_gen_1385427152379_0.hovered #li_ui_li_gen_1385427152379_0-title-text *{color:#000 !important;}.success #li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-title, .success #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-title-text, .success #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-title-text, .success #li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-title-text *, .success #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1385427152379_0.clicked #li_ui_li_gen_1385427152379_0-title, .IN-shadowed .success #li_ui_li_gen_1385427152379_0.down #li_ui_li_gen_1385427152379_0-title{}#li_ui_li_gen_1385427152426_1-container.IN-top {display:inline-block !important;overflow:visible !important;position:relative !important;height:42px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1385427152426_1.IN-top {display:inline-block !important;height:42px !important;width:57px !important;text-align:center !important;background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) -150px top no-repeat !important;}#li_ui_li_gen_1385427152426_1-content.IN-top {display:inline !important;font-size:16px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:34px !important;}#li_ui_li_gen_1385427152426_1-container.IN-hovered #li_ui_li_gen_1385427152426_1.IN-top, #li_ui_li_gen_1385427152426_1-container.IN-clicked #li_ui_li_gen_1385427152426_1.IN-top, #li_ui_li_gen_1385427152426_1-container.IN-down #li_ui_li_gen_1385427152426_1.IN-top {background-position-x:-210px !important;}#li_ui_li_gen_1385427152426_1-container.IN-empty #li_ui_li_gen_1385427152426_1-inner.IN-top {background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) 0px -20px no-repeat !important;overflow:hidden !important;margin:5px auto 0 auto !important;width:26px !important;height:26px !important;display:block !important;}#li_ui_li_gen_1385427152426_1-container.IN-empty #li_ui_li_gen_1385427152426_1-content.IN-top {text-indent:-999px !important;display:inline-block !important;}#li_ui_li_gen_1385427152426_1-container.IN-hidden #li_ui_li_gen_1385427152426_1 {display:none !important;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+.fbpluginrecommendationsbarleft{left:10px}
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body data-twttr-rendered="true" style="position: relative;"><div id="scroll-wrap"></div>
+<div id="container" class="interna curso-django">
+<header>
+<div id="banner-top">
+<script type="text/rocketscript" data-rocketoptimized="true"> try{GA_googleFillSlot("1000x60ATF");}catch(err){} </script>
+</div>
+<div class="contenido">
+<h1 class="areaLogo"><a href="http://www.maestrosdelweb.com/" rel="index" class="logo">Maestros del web</a></h1>
+<ul class="nav">
+<li><a href="http://www.maestrosdelweb.com/">Inicio</a></li>
+<li><a href="http://www.maestrosdelweb.com/temas">Temas</a></li>
+<li><a href="http://www.maestrosdelweb.com/semblanza">Perfiles</a></li>
+<li><a href="http://www.maestrosdelweb.com/guias">Guías</a></li>
+<li><a href="http://www.maestrosdelweb.com/sitio/creditos">Acerca de</a></li>
+<li><a href="http://www.maestrosdelweb.com/sitio/correo">Contacto</a></li>
+</ul>
+<section class="areaBuscador">
+<form role="search" method="get" id="searchform" action="http://www.maestrosdelweb.com/">
+<input type="search" value="" name="s" id="s" class="txt" placeholder="¿Qué buscas?">
+</form>
+</section>
+</div></header><section class="hfeed"><div class="contenido">
+<section class="headerSeccion">
+<div id="sbDjango" class="scrollblock" style="position: absolute; top: 129px;">
+<div id="screen1" class="screen" style="position: relative; left: 45px; top: 80px;">
+<span class="icon"></span>
+<h1 class="logoDjango">Curso Django</h1>
+<h2>El web framework para perfeccionistas</h2>
+</div>
+<div id="screen2" class="screen" style="position: relative; left: 45px; top: 11px;"><span class="icon"></span><span id="screen2txt" class="screenText" style="opacity: 0;">Desarrollo rápido y limpio basado en <a target="_blank" href="http://www.maestrosdelweb.com/guias/#guia-python">Python</a></span></div>
+<div id="screen3" class="screen" style="position: relative; left: 45px; top: -58px;"><span class="icon"></span><span id="screen3txt" class="screenText" style="opacity: 0;"><a id="mostrarCapitulos" href="http://www.maestrosdelweb.com/category/guias/guias-django/" title="guias-django">Ver capítulos</a></span></div>
+</div>
+</section>
+<div class="areaArticulo">
+<div id="areaIndice"></div>
+<aside id="mini-sidebar"><div class="scrollblock" id="mini-sidebar-container" style="position: fixed; top: 0px;"><div id="mini-sidebar-content" style="position: relative; top: 0px;">
+<div class="segmento segmentoAutor">
+<div class="areaAvatar"><div class="entry_author_image"></div>
+</div>
+<p class="vcard author">
+<span class="fn">Sergio</span>
+<a class="username" rel="external" href="http://twitter.com/neosergio">@neosergio</a> </p>
+<div class="areaVermas">
+<a href="http://www.maestrosdelweb.com/author/sergio-infante-montero/" class="btnSiguiente url"><span class="icono"></span>Ver perfíl</a>
+</div>
+</div>
+<div class="segmento segmentoEditar">
+</div>
+</div></div></aside> <article class="hentry entry" id="post-24838">
+<h1 class="entry-title"><a href="./Curso Django  Las Plantillas   Maestros del Web_files/Curso Django  Las Plantillas   Maestros del Web.htm" rel="bookmark" title="#">Curso Django: Las Plantillas</a></h1>
+<div class="entry-content">
+<p>Esta semana tocaremos el tema de las plantillas, si antes no has tenido tiempo para seguir el curso, lo importante es que entiendas <a href="http://www.maestrosdelweb.com/editorial/curso-django-entendiendo-como-trabaja-django/" title="Entendiendo a Django">como funciona Django</a> y por supuesto si no has leído <a href="http://www.maestrosdelweb.com/guias/#guias-django" title="Curso de Django en Maestros del Web">el curso completo</a>, debes hacerlo para que no te pierdas con los ejemplos.</p>
+<h2>El motor de plantillas</h2>
+<p>Django posee un componente conocido como “el motor de plantillas”, este motor brinda un poderoso mini-lenguaje para definir detalles de la capa de la aplicación, que visualizará el usuario. Esto refuerza la separación de la lógica de programación y la lógica de presentación. </p>
+<p>Las plantillas pueden ser desarrolladas y mantenidas por cualquier persona con un poco de conocimiento de HTML y lógica común. No necesita fundamentos de Python. <a href="https://docs.djangoproject.com/en/1.4/topics/templates/" title="Django Templates">Puedes revisar la documentación con respecto al lenguaje de plantillas.</a></p>
+<p><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-vistas/" title="Las vistas en Django">Algunos ejemplos fueron mostrados en el capítulo anterior</a></p>
+<h2>Etiquetas y Filtros</h2>
+<p>Es necesario para aplicar las plantillas con Django, conocer más sobre su propio mini-lenguaje de plantillas. Para ello tenemos las siguientes chuletas (cheatsheets):</p>
+<p><a href="http://www.maestrosdelweb.com/images/2012/05/django-templates.pdf" target="_blank" title="Django Template Cheatsheet"></a></p><div id="attachment_25000" style="width: 327px" class="wp-caption aligncenter"><a href="http://www.maestrosdelweb.com/images/2012/05/django-templates.pdf" target="_blank" title="Django Template Cheatsheet"><img data-cfsrc="http://www.maestrosdelweb.com/images/2012/05/django-templates-0-317x450.jpg" alt="Django: Etiquetas y Filtros" width="317" height="450" class="size-medium wp-image-25000" src="./Curso Django  Las Plantillas   Maestros del Web_files/django-templates-0-317x450.jpg"><p class="wp-caption-text">Django: Etiquetas y Filtros</p></a></div><div id="attachment_25001" style="width: 327px" class="wp-caption aligncenter"><a href="http://www.maestrosdelweb.com/images/2012/05/django-templates.pdf" target="_blank" title="Django Template Cheatsheet"><img data-cfsrc="http://www.maestrosdelweb.com/images/2012/05/django-templates-1-317x450.jpg" alt="Django: Formatos de fecha" width="317" height="450" class="size-medium wp-image-25001" src="./Curso Django  Las Plantillas   Maestros del Web_files/django-templates-1-317x450.jpg"><p class="wp-caption-text">Django: Formatos de fecha</p></a></div><p></p>
+<p>Y como siempre les hago recordar, <a href="https://docs.djangoproject.com/en/1.4/ref/templates/" title="Documentación sobre plantillas">la revisión a la documentación oficial</a> es muy importante. Están divididas en <a href="https://docs.djangoproject.com/en/1.4/ref/templates/builtins/" title="Etiquetas y Filtros Django">etiquetas y filtros predefinidos</a> y el <a href="https://docs.djangoproject.com/en/1.4/ref/templates/api/" title="El lenguaje de plantillas de Django para programadores Python">lenguaje de plantillas de Django para programadores de Python</a>. </p>
+<h2>Las plantillas de nuestro proyecto</h2>
+<p>En el capítulo anterior, trabajamos con algunas plantillas simples, sin entrar en detalle de su funcionamiento, esta semana modificaremos las plantillas, utilizaremos algunos filtros y etiquetas predeterminadas, obviamente veremos a detalle de que tratan.</p>
+<div class="tipexperto" id="tip-0">
+<h4>Nota:</h4>
+<div class="tipcont">Las plantillas están almacenadas en la carpeta configurada en el settings.py, si no recuerdas su ubicación, revisa los capítulos anteriores.</div>
+</div><div class="toolbar"><a class="btnHerramienta" href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#" onclick="Evernote.doClip({styling:&#39;full&#39;,title:&#39;Curso Django: Las Plantillas&#39;,contentId:&#39;tip-0&#39;,providerName:&#39;Maestros del Web&#39;,suggestNotebook:&#39;django - Maestros del Web&#39;,suggestTags:&#39;guias, django&#39;}); return false;"><img src="./Curso Django  Las Plantillas   Maestros del Web_files/article-clipper-es.png" alt="Capturar a Evernote"></a></div>
+<h3>base.html</h3>
+<p>Esta es una nueva plantilla, no habíamos utilizado anteriormente alguna de este tipo, esta plantilla base, hace exactamente lo que su nombre sugiere, sirve de base para las demás.</p>
+<div id="attachment_24994" style="width: 460px" class="wp-caption aligncenter"><a href="http://www.maestrosdelweb.com/images/2012/05/django-template-base.png"><img data-cfsrc="http://www.maestrosdelweb.com/images/2012/05/django-template-base-450x346.png" alt="base.html" width="450" height="346" class="size-medium wp-image-24994" src="./Curso Django  Las Plantillas   Maestros del Web_files/django-template-base-450x346.png"></a><p class="wp-caption-text">base.html</p></div>
+<p>En esta plantilla es importante notar, que se encuentra la estructura principal de toda la aplicación. Ademas se usa la etiqueta <strong>{% block _______ %} {% endblock %}</strong> (reemplaza _______ con el nombre del bloque), esta etiqueta se reemplazará con contenido en cada una de las plantillas que restan. Por ahora agregaremos CSS dentro de la etiquetación HTML, no lo hacemos todavia desde un archivo CSS porque esto lo veremos con mayor detalle en el capítulo de archivos estáticos.</p>
+<h3>inicio.html</h3>
+<p>Esta es la plantilla que estamos usando para la página de inicio, y debe quedar con las siguientes modificaciones:<br>
+</p><div id="attachment_24995" style="width: 460px" class="wp-caption aligncenter"><a href="http://www.maestrosdelweb.com/images/2012/05/django-template-inicio.png"><img data-cfsrc="http://www.maestrosdelweb.com/images/2012/05/django-template-inicio-450x443.png" alt="inicio.html" width="450" height="443" class="size-medium wp-image-24995" src="./Curso Django  Las Plantillas   Maestros del Web_files/django-template-inicio-450x443.png"></a><p class="wp-caption-text">inicio.html</p></div><p></p>
+<ul>
+<li><strong>{% extends ‘base.html’ %}</strong>, esta línea permite importar la plantilla <strong>base.html</strong> y reemplazar cada vez que encuentre los bloques, con los de esta plantilla.</li>
+<li><strong>{% comment %}{% endcomment %}</strong> es un ejemplo de como pueden incluirse comentarios en el lenguaje de plantillas de Django, todo lo que se encuentre dentro de estas etiquetas, será ignorado.</li>
+<li><strong>{% with %}</strong> permite poner la cantidad de elementos de alguna respuesta y puede ser usado para mostrar palabras en plurales, dependiendo de la circunstancia.</li>
+<li><strong>{% for dato in recetas %}</strong> permite acceder a cada receta en particular.</li>
+<li><strong>{% cycle ‘impar’ ‘par’ %}</strong> permite iterar con los valores ‘impar’ o ‘par’, que pueden verse afectados con algunas reglas en CSS simples que se encuentran en <strong>{% block style_css %}</strong></li>
+<li><strong>{% empty %}</strong> es usado en caso de que no existan elementos en las recetas.</li>
+</ul>
+<h3>usuarios.html</h3>
+<p>La plantilla que muestra los usuarios registrados:<br>
+</p><div id="attachment_24998" style="width: 460px" class="wp-caption aligncenter"><a href="http://www.maestrosdelweb.com/images/2012/05/django-template-usuarios.png"><img data-cfsrc="http://www.maestrosdelweb.com/images/2012/05/django-template-usuarios-450x369.png" alt="usuarios.html" width="450" height="369" class="size-medium wp-image-24998" src="./Curso Django  Las Plantillas   Maestros del Web_files/django-template-usuarios-450x369.png"></a><p class="wp-caption-text">usuarios.html</p></div><p></p>
+<p>Además de las etiquetas vistas anteriormente, aquí podemos encontrar:</p>
+<ul>
+<li><strong>{{dato.username|capfirst}}</strong> esto se usa para capitalizar el nombre del usuario (primera letra en mayúscula)</li>
+<li>Bloque <strong>{% if %}{% endif %}</strong> para comprobar que receta pertenece al usuario actual del bucle <strong>{% for %}</strong></li>
+</ul>
+<h3>recetas.html</h3>
+<p>Esta plantilla nos muestra la lista de recetas registradas:<br>
+</p><div id="attachment_24997" style="width: 460px" class="wp-caption aligncenter"><a href="http://www.maestrosdelweb.com/images/2012/05/django-template-recetas.png"><img data-cfsrc="http://www.maestrosdelweb.com/images/2012/05/django-template-recetas-450x289.png" alt="recetas.html" width="450" height="289" class="size-medium wp-image-24997" src="./Curso Django  Las Plantillas   Maestros del Web_files/django-template-recetas-450x289.png"></a><p class="wp-caption-text">recetas.html</p></div><p></p>
+<ul>
+<li><strong>{% url principal.views.detalle_receta dato.id %}</strong> esta etiqueta, trabaja con <em>views.py</em> (ubica una vista y le pasa un parametro), se traduce en <em>/receta/dato.id</em>, donde <em>dato.id</em> es reemplazado por la id de la receta del elemento actual del bucle <strong>{% for %}</strong> </li>
+</ul>
+<h3>receta.html</h3>
+<p>Esta plantilla se usará para mostrar los detalles de cada receta registrada:<br>
+</p><div id="attachment_24996" style="width: 460px" class="wp-caption aligncenter"><a href="http://www.maestrosdelweb.com/images/2012/05/django-template-receta.png"><img data-cfsrc="http://www.maestrosdelweb.com/images/2012/05/django-template-receta-450x274.png" alt="receta.html" width="450" height="274" class="size-medium wp-image-24996" src="./Curso Django  Las Plantillas   Maestros del Web_files/django-template-receta-450x274.png"></a><p class="wp-caption-text">receta.html</p></div><p></p>
+<p>Ademas de todas las etiquetas usadas y ya explicadas anteriormente se puede notar:</p>
+<ul>
+<li><strong>{{receta.titulo|title}}</strong> transforma los títulos de la receta en formato título (la primera letra de cada palabra en mayúscula.</li>
+<li><strong>{{ receta.tiempo_registro|date:’SHORT_DATETIME_FORMAT’ }}</strong> configura la impresión de fecha como: dd/mm/aaaa hh:mm (ejemplo: 20/05/2012 21:05), se puede ver mas formatos de fecha a usar en los cheatsheets de arriba.</li>
+</ul>
+<h3>Practica y practica</h3>
+<p>La mejor forma de aprender Django es practicando, así que supongo que lo estas haciendo, durante todos los capítulos, ahora toca que crees tus propias plantillas, para tus propias consultas y vistas, que seguramente ya programaste con ayuda del curso de Django.</p>
+<p>No te olvides de <a href="https://docs.djangoproject.com/en/1.4/" title="Documentación Django">revisar la documentación</a> por si buscas más ejemplos y detalles de las diversas etiquetas, es la mejor fuente para aprender más sobre este estupendo framework.</p>
+<p>Puedes leer también: <a href="http://www.maestrosdelweb.com/editorial/python-django-mejorandola/" title="Python y Django en Mejorando.la">Cómo se utiliza Python y Django en Mejorando.la</a> y si el ingles no es problema para tí, puedes ver una charla del PyCon 2012 sobre las plantillas en Django:</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="640" height="390" src="./Curso Django  Las Plantillas   Maestros del Web_files/ahM4GBZ-6qg.htm" frameborder="0"></iframe></span>
+<p>Eso es todo por esta semana, deja tus comentarios como siempre, que ayudan a mejorar el contenido del curso, y que ayudan de manera importante a todos los que siguen el curso, que tengan un buen inicio de semana con Django <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_smile.gif"> .<br>
+</p><h3>Siguiente capítulo: <a href="http://www.maestrosdelweb.com/editorial/curso-django-los-formularios/"> Los formularios</a> →</h3>
+</div>
+</article>
+<section class="areaAutor">
+<p class="clearfix"></p><div class="entry_author_image"></div>
+<strong>Sergio Infante Montero</strong> para <a href="http://www.maestrosdelweb.com/">Maestros del Web</a>.<br>
+<a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#respond">Agrega tu comentario</a> | <a href="./Curso Django  Las Plantillas   Maestros del Web_files/Curso Django  Las Plantillas   Maestros del Web.htm">Enlace permanente</a> al artículo<p></p>
+<p><strong>Síguenos en:</strong> <img style="vertical-align:middle;" data-cfsrc="http://www.maestrosdelweb.com/diseno/imagenes/twitter.png" data-cfstyle="vertical-align:middle;" alt="Twitter" src="./Curso Django  Las Plantillas   Maestros del Web_files/twitter.png"> <a href="http://twitter.com/maestros">@maestros</a> | <img data-cfstyle="vertical-align:middle;" style="vertical-align:middle;" data-cfsrc="http://www.maestrosdelweb.com/diseno/imagenes/facebook.png" alt="Facebook" src="./Curso Django  Las Plantillas   Maestros del Web_files/facebook.png"> <a href="http://www.facebook.com/maestrosdelweb">Fan page</a></p>
+</section>
+<section class="areaSocial">
+<h2 id="comments" class="tituloComentarios">44 comentarios</h2>
+<div class="sBookmarks">
+<div class="bookmark sbTwitter">
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Curso Django  Las Plantillas   Maestros del Web_files/tweet_button.1384994725.htm" class="twitter-share-button twitter-tweet-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 70px; height: 62px;"></iframe><script type="text/rocketscript" data-rocketsrc="http://platform.twitter.com/widgets.js" data-rocketoptimized="true"></script>
+</div>
+<div class="bookmark sbFacebook">
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./Curso Django  Las Plantillas   Maestros del Web_files/xd_arbiter.htm" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./Curso Django  Las Plantillas   Maestros del Web_files/xd_arbiter(1).htm" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script type="text/rocketscript" data-rocketoptimized="true">(function(d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0];
+							if (d.getElementById(id)) {return;}
+							js = d.createElement(s); js.id = id;
+							js.src = "//connect.facebook.net/en_US/all.js#appId=269602203058716&xfbml=1";
+							fjs.parentNode.insertBefore(js, fjs);
+							}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-send="false" data-layout="box_count" data-width="50" data-show-faces="false" data-font="verdana" fb-xfbml-state="rendered"><span style="height: 61px; width: 49px;"><iframe id="f24db7ea3" name="f299a327e4" scrolling="no" title="Like this content on Facebook." class="fb_ltr" src="./Curso Django  Las Plantillas   Maestros del Web_files/like.htm" style="border: none; overflow: hidden; height: 61px; width: 49px;"></iframe></span></div>
+</div>
+<div class="bookmark sbGoogle">
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" width="100%" id="I0_1385427152200" name="I0_1385427152200" src="./Curso Django  Las Plantillas   Maestros del Web_files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div>
+<script type="text/rocketscript" data-rocketoptimized="true">
+							window.___gcfg = {lang: 'es'};
+							(function() {
+							var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							po.src = 'https://apis.google.com/js/plusone.js';
+							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							})();
+							</script>
+</div>
+<div class="bookmark sbLinkedin">
+<script data-rocketsrc="http://platform.linkedin.com/in.js" type="text/rocketscript" data-rocketoptimized="true"></script>
+<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1385427152426_1-container" class="IN-top"><span id="li_ui_li_gen_1385427152426_1" class="IN-top"><span id="li_ui_li_gen_1385427152426_1-inner" class="IN-top"><span id="li_ui_li_gen_1385427152426_1-content" class="IN-top">9</span></span></span></span></span><br><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1385427152379_0"><a id="li_ui_li_gen_1385427152379_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1385427152379_0-logo">in</span><span id="li_ui_li_gen_1385427152379_0-title"><span id="li_ui_li_gen_1385427152379_0-mark"></span><span id="li_ui_li_gen_1385427152379_0-title-text">Share</span></span></a></span></span></span><script type="IN/Share+init" data-counter="top"></script>
+</div>
+</div>
+<div class="areaComentarios">
+<div class="clear"></div>
+<div id="comentarios">
+<div class="commentp"><a name="comments">44</a></div>
+<h3>Comentarios</h3>
+ 
+ 
+<ol class="lista_comentarios">
+<li class="comment" id="comment-196551">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/a8906b6af411d36ab11499ee7646e671?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/a8906b6af411d36ab11499ee7646e671"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196551">1</a></div>
+<div class="autorcomentario">
+<strong>hugo castañeda</strong>
+</div>
+<p>excelente ya se mucho mas sobre python gracias ha @neosergio y @maestros</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196551" title="enlace a este comentario">28.05.2012 - 11:42</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196554">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/6b41a983c01d3af0ca1c8f51eab96a48?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/6b41a983c01d3af0ca1c8f51eab96a48"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196554">2</a></div>
+<div class="autorcomentario">
+<strong><a href="https://twitter.com/#!/Carlangueitor" rel="external nofollow" class="url">Carlangueitor</a></strong>
+</div>
+<p>Deberían, poner el código escrito, y no una imagen, creo que sería más cómodo para los usuarios y para quien escribe…</p>
+<p>Saludos!</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196554" title="enlace a este comentario">28.05.2012 - 12:19</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196556">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/6f7928d34573a7d14352bf543a5024eb?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/6f7928d34573a7d14352bf543a5024eb"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196556">3</a></div>
+<div class="autorcomentario">
+<strong>cesar</strong>
+</div>
+<p>Tienes razón seria mas practico para todos el copiar y pegar. Pero la verdad estamos acostumbrados a realizar copia y pega que todos los trabajos se realizan así y la gente nunca llega a aprender nada; esto es programación y lo que hace realmente aprender es teclear código tras código; las sentencias llegan a aprenderse tecleando, me gusta mucho que pongan imágenes así tecleo el código y lo voy entendiendo paso a paso.</p>
+<p>Muy bueno el tutorial lo sigo desde el primer día.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196556" title="enlace a este comentario">28.05.2012 - 12:37</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196561">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196561">4</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>La principal razón es por didáctica. Gracias por entender el porque de poner imagenes en lugar de texto. Otra razón es: al usar para poner código, se desordena y causa confusión, como ya paso en artículos anteriores.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196561" title="enlace a este comentario">28.05.2012 - 14:04</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196558">
+<div class="wrap altt">
+<div class="leftarea">
+<img data-cfsrc="http://www.maestrosdelweb.com/wp-content/authors/cvander-72.jpg" alt="Christian Van Der Henst S." width="40" height="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/cvander-72.jpg"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196558">5</a></div>
+<div class="autorcomentario">
+<strong><a href="http://www.maestrosdelweb.com/" rel="external nofollow" class="url">Christian Van Der Henst S.</a></strong>
+</div>
+<p>@Sergio, muy útiles las chuletas para los que aún estamos aprendiendo a trabajar con plantillas. Gracias por el capítulo.</p>
+<p>Con respecto al código y compartirlo, si quieres organizamos un repositorio en bitbucket o github para que pueda descargarse.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196558" title="enlace a este comentario">28.05.2012 - 13:17</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196588">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196588">6</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>Olvide mencionarlo esta semana, el repositorio del proyecto esta aquí: <a href="http://neosergio.github.com/recetario_mdw" rel="nofollow">http://neosergio.github.com/recetario_mdw</a> <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_smile.gif"> </p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196588" title="enlace a este comentario">29.05.2012 - 17:24</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196564">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/c3f0a67a84353a6a7d275e9333ce3328?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/c3f0a67a84353a6a7d275e9333ce3328"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196564">7</a></div>
+<div class="autorcomentario">
+<strong><a href="http://klank.lugama.org/" rel="external nofollow" class="url">Alexander Morales</a></strong>
+</div>
+<p>que tal @neosergio una pregunta rapida jeje<br>
+que es mas recomendable utilizar<br>
+{% block content %}{% endblock %} </p>
+<p>o<br>
+{% block content %}{% endblock content %}</p>
+<p>me quedo duda al ver el video sobre plantillas, saludos!</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196564" title="enlace a este comentario">28.05.2012 - 16:48</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196582">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/10af94bf0d61249e2e1f18c9424b3951?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/10af94bf0d61249e2e1f18c9424b3951"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196582">8</a></div>
+<div class="autorcomentario">
+<strong><a href="http://twitter.com/netomo" rel="external nofollow" class="url">netomo</a></strong>
+</div>
+<p>Para el motor de plantillas es exactamente lo mismo, pero la segunda opción es mejor en términos de legibilidad, si manejas muchos bloques anidados y grandes puede resultar confuso tener al final varios {% endblock %} uno tras otro y tal vez no sepas donde comenzar otro bloque, en esos casos es recomendable usar la segunda forma =)</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196582" title="enlace a este comentario">28.05.2012 - 23:28</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196566">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/40eb93d9800a38679e9269c788ed35b0?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/40eb93d9800a38679e9269c788ed35b0"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196566">9</a></div>
+<div class="autorcomentario">
+<strong><a href="http://ucssinux.org/" rel="external nofollow" class="url">Danilo</a></strong>
+</div>
+<p>Yo adoro Django :3</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196566" title="enlace a este comentario">28.05.2012 - 17:11</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196585">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/c3f0a67a84353a6a7d275e9333ce3328?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/c3f0a67a84353a6a7d275e9333ce3328"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196585">10</a></div>
+<div class="autorcomentario">
+<strong><a href="http://klank.lugama.org/" rel="external nofollow" class="url">Alexander Morales</a></strong>
+</div>
+<p>Gracias @netomo, me queda super claro!! saludos!</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196585" title="enlace a este comentario">29.05.2012 - 12:07</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196592">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/10af94bf0d61249e2e1f18c9424b3951?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/10af94bf0d61249e2e1f18c9424b3951"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196592">11</a></div>
+<div class="autorcomentario">
+<strong><a href="http://twitter.com/netomo" rel="external nofollow" class="url">netomo</a></strong>
+</div>
+<p>de nada! también adoro django… llevo 4 años trabajando con el =)</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196592" title="enlace a este comentario">29.05.2012 - 22:16</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196587">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/313dfc26d66d90b222deea6d6b39b8bf?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/313dfc26d66d90b222deea6d6b39b8bf"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196587">12</a></div>
+<div class="autorcomentario">
+<strong>daniel</strong>
+</div>
+<p>Ahora conforma avanza el curso ya quiero que sea lunes. Gracias @neosergio.</p>
+<p>El vídeo esta muy bien, aunque no sepas mucho inglés se entiende.</p>
+<p>Saludos.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196587" title="enlace a este comentario">29.05.2012 - 13:16</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196589">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196589">13</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>Gracias a todos por seguir el curso, que bueno que les sirva para aprender el framework</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196589" title="enlace a este comentario">29.05.2012 - 17:25</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196599">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/05c7049e805604d9fa23c5ff335124a9?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/05c7049e805604d9fa23c5ff335124a9"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196599">14</a></div>
+<div class="autorcomentario">
+<strong>Alejandro Perez</strong>
+</div>
+<p>ta muy weno.</p>
+<p>encontré esto, snippets de django para sub text 2 <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_biggrin.gif"> </p>
+<p><a href="https://github.com/fxdgear/sublime-text-django-snippets" rel="nofollow">https://github.com/fxdgear/sublime-text-django-snippets</a></p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196599" title="enlace a este comentario">30.05.2012 - 14:54</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196600">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/05c7049e805604d9fa23c5ff335124a9?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/05c7049e805604d9fa23c5ff335124a9"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196600">15</a></div>
+<div class="autorcomentario">
+<strong>Alejandro Perez</strong>
+</div>
+<p>Hola,<br>
+Tengo un problema, en recetas.html me da un error:</p>
+<p>NoReverseMatch at /recetas/</p>
+<p>Me marca ésta línea:<br>
+<a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/%7B%%20url%20principal.views.detalle_receta%20dato.id%20%%7D" rel="nofollow">{{dato.titulo}}</a></p>
+<p>bajé los archivos del repo, y tienen lo mismo &gt;.&lt; en el views igual.</p>
+<p>el resto anda todo perfect <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_biggrin.gif"> </p>
+<p>saludos!</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196600" title="enlace a este comentario">30.05.2012 - 15:20</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196603">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/05c7049e805604d9fa23c5ff335124a9?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/05c7049e805604d9fa23c5ff335124a9"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196603">16</a></div>
+<div class="autorcomentario">
+<strong>Alejandro Perez</strong>
+</div>
+<p>seguí el manual y todo bien menos la pagina de recetas.html</p>
+<p>tanto a mano como con los archivos del repo me arroja el siguiente error:</p>
+<p>NoReverseMatch at /recetas/<br>
+Reverse for ” with arguments ‘(1,)’ and keyword arguments ‘{}’ not found.</p>
+<p>marcando ésta línea Nº19:<br>
+<a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/%7B%%20url%20principal.views.detalle_receta%20dato.id%20%%7D" rel="nofollow">{{dato.titulo}}</a></p>
+<p>el resto, está fenomenal <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_smile.gif"> , se agradece, muy claro, 1000 veces mas simple que symfony que me la ganó <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_sad.gif"> </p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196603" title="enlace a este comentario">30.05.2012 - 19:17</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196619">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196619">17</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>Hola Alejandro</p>
+<p>Parece que es un error muy particular, por los detalles que me brindas, porque no me mandas un DM por twitter para poder coordinar una sesion con teamviewer y ver lo que esta pasando en realidad. Puede ser un error de este tipo (<a href="http://stackoverflow.com/questions/4981026/no-reverse-match-error" rel="nofollow">http://stackoverflow.com/questions/4981026/no-reverse-match-error</a>)</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196619" title="enlace a este comentario">31.05.2012 - 17:04</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-197092">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/0fe939b38e1c12d2fbbe6599e9b1711b?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/0fe939b38e1c12d2fbbe6599e9b1711b"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197092">18</a></div>
+<div class="autorcomentario">
+<strong><a href="http://www.devgets.com/" rel="external nofollow" class="url">Marcelo Portillo</a></strong>
+</div>
+<p>a mi me sucedio algo parecido lo solucione poniendole ‘ ‘ a esta linea<br>
+{% url ‘principal.views.detalle_receta’ dato.id %}<br>
+Slds</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197092" title="enlace a este comentario">01.07.2012 - 17:54</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196606">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/737434d069803adebdef7ddd1f8cb404?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/737434d069803adebdef7ddd1f8cb404"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196606">19</a></div>
+<div class="autorcomentario">
+<strong>Matts</strong>
+</div>
+<p>Muy bueno el curso!!</p>
+<p>Tengo una duda acerca de los roles del programador y el maquetador. El programador es el que se encarga de separar la plantilla base de las demas paginas y agregar las sentencias Django? O el maquetador tiene que tener conocimientos minimos para el trabajo con plantillas?</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196606" title="enlace a este comentario">31.05.2012 - 07:09</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196620">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196620">20</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>Hola Matts</p>
+<p>Pues me parece que depende mucho de las habilidades con la gente que se trabaja, como veras el lenguaje de plantillas de Django no es complejo, así que tranquilamente puede ser aprendido por un maquetador. Sin embargo si se desea un resultado mejor, yo te recomendaria, que puedas usar algo como pair programming, juntando a un maquetador y un programador para que armen las plantillas, así se asegura que no se cometan errores.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196620" title="enlace a este comentario">31.05.2012 - 17:05</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196607">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/f599c39234f4ac78bcc9fd038a4442b5?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/f599c39234f4ac78bcc9fd038a4442b5"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196607">21</a></div>
+<div class="autorcomentario">
+<strong><a href="http://www.almightysystem.com.ar/" rel="external nofollow" class="url">Onsterion</a></strong>
+</div>
+<p>Buenas soy nuevo en Python Django tengo dos preguntas:</p>
+<p>1- Armé una estructura así :</p>
+<p>Base</p>
+<p>head.js(“{{ STATIC_URL }}js/jquery.js”, “{{ STATIC_URL }}js/scripts.js”, function() {});</p>
+<p> {% include “diagrama/header.html” %}</p>
+<p> {% include “diagrama/nav_bar.html” %}</p>
+<p> Prueba index</p>
+<p> {% include “diagrama/footer.html” %}</p>
+<p>Se me hace mucho más entendible así.</p>
+<p>Esta muy mal xD?</p>
+<p>2- Hay alguna forma de usar JQuery Ajax con django?, ejemplo:</p>
+<p>$(document).ready(function() {<br>
+$.ajax({<br>
+type : “POST”,<br>
+cache : false,<br>
+url : “/unformularo.html”,<br>
+data : $(this).serializeArray(),<br>
+success: function(data) {<br>
+if(data == ‘OK’){<br>
+alert(‘ALGO’);<br>
+}else{<br>
+alert(‘ALGO’);<br>
+}<br>
+return false;<br>
+}<br>
+});<br>
+});</p>
+<p>Saludos.-</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196607" title="enlace a este comentario">31.05.2012 - 07:37</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196608">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/f599c39234f4ac78bcc9fd038a4442b5?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/f599c39234f4ac78bcc9fd038a4442b5"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196608">22</a></div>
+<div class="autorcomentario">
+<strong>Onsterion</strong>
+</div>
+<p>Por algun motivo se corto todo lo que era HTML al enviar el mensaje =&gt;</p>
+<p>Base</p>
+<p>head.js(“{{ STATIC_URL }}js/jquery.js”, “{{ STATIC_URL }}js/scripts.js”, function() {});</p>
+<p> {% include “diagrama/header.html” %}</p>
+<p> {% include “diagrama/nav_bar.html” %}</p>
+<p> Prueba index</p>
+<p> {% include “diagrama/footer.html” %}</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196608" title="enlace a este comentario">31.05.2012 - 07:41</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196609">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/f599c39234f4ac78bcc9fd038a4442b5?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/f599c39234f4ac78bcc9fd038a4442b5"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196609">23</a></div>
+<div class="autorcomentario">
+<strong>Onsterion</strong>
+</div>
+<p>Definitivamente no se puede poner HTML jaja, pueden borrar los mensajes?</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196609" title="enlace a este comentario">31.05.2012 - 07:42</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196621">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196621">24</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>Hola Onsterion, que tal si usas <a href="https://gist.github.com/" rel="nofollow">https://gist.github.com/</a> para poder mostrarme lo que escribiste? <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_smile.gif"> </p>
+<p>Un saludo</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196621" title="enlace a este comentario">31.05.2012 - 17:07</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196651">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/313dfc26d66d90b222deea6d6b39b8bf?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/313dfc26d66d90b222deea6d6b39b8bf"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196651">25</a></div>
+<div class="autorcomentario">
+<strong>daniel</strong>
+</div>
+<p>Que tal @neosergio.</p>
+<p>Una pregunta, trate de meter una variable a una de las plantillas, pero no supe como hacerlo. </p>
+<p>Cuando busque, según esto no se puede hacer, es cierto. </p>
+<p>Intente contar cuantas recetas había por usuario en la plantilla usuarios.html.</p>
+<p>Saludos y gracias por todo.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196651" title="enlace a este comentario">01.06.2012 - 15:37</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196664">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/40eb93d9800a38679e9269c788ed35b0?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/40eb93d9800a38679e9269c788ed35b0"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196664">26</a></div>
+<div class="autorcomentario">
+<strong><a href="http://ucssinux.org/" rel="external nofollow" class="url">Danilo</a></strong>
+</div>
+<p>Para enviar variables a una plantilla debes hacer desde la vista osea desde tu views.py !! en donde le pasa como referencia !! al tu template la variable !! con render_to_response, por ejemplo:<br>
+def usuarios(request):<br>
+lista_usuarios = Usuarios.objects.all()<br>
+return render_to_response(“Ruta_de_tu_plantilla/tu_plantilla.html”,{“lista_usuarios”:lista_usuarios})</p>
+<p>Claro tienes que agregar el codigo que te import tu Clase usuarios de tu model !!<br>
+espero te sriva !</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196664" title="enlace a este comentario">01.06.2012 - 20:46</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196671">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/87ac75add64ffd1b2e7ed0f82c19238e?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/87ac75add64ffd1b2e7ed0f82c19238e"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196671">27</a></div>
+<div class="autorcomentario">
+<strong>Ricky</strong>
+</div>
+<p>Se han percatado que la cantidad de comentarios han disminuido? jejeje… vamos muchachos sigamos en la lucha que no está dificil! Gracias @Sergio</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196671" title="enlace a este comentario">02.06.2012 - 22:16</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196683">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196683">28</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p> <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_smile.gif"> otra recomendación es que práctiquen con una idea propia.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196683" title="enlace a este comentario">03.06.2012 - 22:38</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196737">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/737434d069803adebdef7ddd1f8cb404?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/737434d069803adebdef7ddd1f8cb404"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196737">29</a></div>
+<div class="autorcomentario">
+<strong>Matias</strong>
+</div>
+<p>Se fueron los Copy / Pasteros y quedaron los typeadores, programadores de verdad.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196737" title="enlace a este comentario">06.06.2012 - 14:56</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196674">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/40eb93d9800a38679e9269c788ed35b0?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/40eb93d9800a38679e9269c788ed35b0"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196674">30</a></div>
+<div class="autorcomentario">
+<strong><a href="http://uccsinux.org/" rel="external nofollow" class="url">Danilo</a></strong>
+</div>
+<p>Bueno no es eso, es que todos estan practicando osea repitiendo todos los pasos desde cero =) yo estoy un poco mas avanzado creo ! Pero me gusta aprender mas cositas y trucos de los demas y colaborar con esto que en verdad es genial Sergio es genial explicando y lo hace secuencialmente si le sucede algun error o es que usan windows y tienen que hacer trabajo de configuracion que es algo mas pesado y si no es que aveces tipean mal o se olvidan de escribir algunas cosas</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196674" title="enlace a este comentario">03.06.2012 - 08:15</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196684">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196684">31</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>Gracias Danilo, por seguir el curso de esa manera.<br>
+Altamente recomendado, usar un entorno tipo UNIX (OS X o GNU/Linux), en Windows también se puede pero ser pierden de cosas realmente geniales. Y sobre todo, he decidido pegar una imagen del código, para motivarlos a no sólo copiar y pegar (así no se aprende), sino a tipear y al menos recordar lo que se escribe. <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_smile.gif"> </p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196684" title="enlace a este comentario">03.06.2012 - 22:40</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-196707">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/40eb93d9800a38679e9269c788ed35b0?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/40eb93d9800a38679e9269c788ed35b0"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196707">32</a></div>
+<div class="autorcomentario">
+<strong><a href="http://ucssinux.org/" rel="external nofollow" class="url">Danilo</a></strong>
+</div>
+<p>Claro Sergio eso es la idea , si no al final solo se acostumbran a pegar codigo y no sabian ni que hacia !! a pesar de que ya estaba explicado es importante repasar y transcribir codigo ayuda a darte cuenta de lo que haces y como lo haces aparte de hacerte espacio en la memoria de lo que haces :3</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196707" title="enlace a este comentario">04.06.2012 - 15:54</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196815">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/d29ed2a18eee7980e9376955411a108b?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/d29ed2a18eee7980e9376955411a108b"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196815">33</a></div>
+<div class="autorcomentario">
+<strong><a href="http://canariasanuncia.com/" rel="external nofollow" class="url">Daniel Pérez</a></strong>
+</div>
+<p>Buenas,<br>
+Realmente bueno el curso, esta muy didacticamente escrito y ciertamente fuerza al programador a typear código y aprender cada linea que se escribe.<br>
+Estoy encantado con Python y el FW Django, tanto que voy a reprogramar un proyecto que tenía a medias en CakePHP. A ver si la experiencia sigue siendo tan buena como hasta ahora,</p>
+<p>Muchas gracias a Sergio y todos los que aquí aportan ideas, sin duda en compañía es mucho más facil</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196815" title="enlace a este comentario">12.06.2012 - 14:47</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196871">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196871">34</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>Gracias por seguir el curso <img data-cfsrc="http://www.maestrosdelweb.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" src="./Curso Django  Las Plantillas   Maestros del Web_files/icon_smile.gif"> , y refuerzo tu idea no hay nada mas útil para aprender un framework que aplicandolo a un proyecto real.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196871" title="enlace a este comentario">17.06.2012 - 17:55</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-196923">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/03b5b96862d62100d22f20da20d2bea3?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/03b5b96862d62100d22f20da20d2bea3"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196923">35</a></div>
+<div class="autorcomentario">
+<strong>Solo</strong>
+</div>
+<p>Muy buena curso sergio, gracias.<br>
+Mi consulta es sobre si el bloque “css” de la plantilla recetas.html es correcto, porque cuando lo abro en el navegador no sale la imagen. No debería ser “style_css”.</p>
+<p>PD: Voy siguiendo el curso sin ningún problema.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196923" title="enlace a este comentario">21.06.2012 - 08:35</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-196967">
+<div class="wrap  altmdw">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/3ca2b43e8aedb28a82fdca67e28281a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/3ca2b43e8aedb28a82fdca67e28281a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196967">36</a></div>
+<div class="autorcomentario">
+<strong><a href="http://neosergio.net/" rel="external nofollow" class="url">Sergio Infante Montero</a></strong>
+</div>
+<p>Si tienes razón ese es un error. Gracias por hacermelo notar, en la versión descargable estará solucionado.</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-196967" title="enlace a este comentario">23.06.2012 - 15:53</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-197661">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/7bc5606a8e151679a84ef5e7b4d1dfe1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/7bc5606a8e151679a84ef5e7b4d1dfe1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197661">37</a></div>
+<div class="autorcomentario">
+<strong>TheKraKeN</strong>
+</div>
+<p>Yo tampoco puedo ver las imagenes… y ya no se como resolverlo creo que es una problema con MEDIA_PATH o no se, que estoy haciendo mal ayudenme por fa….</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197661" title="enlace a este comentario">10.08.2012 - 19:23</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-197577">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/0a8c48f76fc4b94f4d4918802516169c?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/0a8c48f76fc4b94f4d4918802516169c"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197577">38</a></div>
+<div class="autorcomentario">
+<strong>Fernando</strong>
+</div>
+<p>Hola Sergio,</p>
+<p>Una pregunta, dentro de un archivo .html al modificarlo me aparece al instante en la vista<br>
+lo que he quitado , pero quiero aäadir algo o modificar una variable y me sale un error field_mapping, soy un poco nuevo en esto del Django, sincronizo la base de datos y he recompilado todos los py que tengo pero no consigo modificar una variable en un formulario<br>
+desde el archivo .html….nose si me explico muy bien<br>
+Archivo forms.py<br>
+variable.label=ejercicio ANTIGUA<br>
+variable.label=NuevoEjercicio VALOR NUEVO DE LA VARIABLE</p>
+<p>ejercicio.html<br>
+{{form.variable.label}}</p>
+<p>pues al ir al localhost en la vista (en un formulario) me sigue apareciendo ejercicio en vez de NuevoEjercicio</p>
+<p>si puedes ayudarme genial y sino gracias por tu tutorial y por tu tiempo</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197577" title="enlace a este comentario">02.08.2012 - 11:19</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-197660">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/8267213dff35b907c9989e0d58d41d43?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/8267213dff35b907c9989e0d58d41d43"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197660">39</a></div>
+<div class="autorcomentario">
+<strong>Alex</strong>
+</div>
+<p>sabes, tengo un problema… no logro ver las imagenes correspondientes a las recetas…</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197660" title="enlace a este comentario">10.08.2012 - 19:21</a>
+</small>
+</div>
+</div>
+<ol class="children">
+<li class="comment" id="comment-197663">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/7bc5606a8e151679a84ef5e7b4d1dfe1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/7bc5606a8e151679a84ef5e7b4d1dfe1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197663">40</a></div>
+<div class="autorcomentario">
+<strong>TheKraKeN</strong>
+</div>
+<p>Yo tampoco puedo ver las imagenes…</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197663" title="enlace a este comentario">10.08.2012 - 19:44</a>
+</small>
+</div>
+</div>
+</li> 
+</ol> 
+</li> 
+<li class="comment" id="comment-197697">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/850c91f361158b2b407b5b6e6d07e20d?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/850c91f361158b2b407b5b6e6d07e20d"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197697">41</a></div>
+<div class="autorcomentario">
+<strong>El tal Chris</strong>
+</div>
+<p>Hola a mi no me funcionan los de las imagenes, desde el momento de cargarlas, no se si sea xq uso Windows, pero el tuto muy bien, de hecho fantástico, saludos @neosergio</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197697" title="enlace a este comentario">13.08.2012 - 19:36</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-197984">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/e41995f74dd48f37c94fcafb2e26dbfa?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/e41995f74dd48f37c94fcafb2e26dbfa"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197984">42</a></div>
+<div class="autorcomentario">
+<strong>Axel</strong>
+</div>
+<p>buenas, el tutorial increible, gracias</p>
+<p>estoy teniendo un problema con {% with total = Comentario.objects.[0]texto %} {{total}} {% endwith %}</p>
+<p>lo he probado de todas las maneras… y cosas que me funcionan en el shell, en la plantilla me petando, siempre con un:</p>
+<p>Error during template rendering</p>
+<p>In template /home/usuario/django/projects/volei/volei/plantillas/inicio.html, error at line 5<br>
+Could not parse the remainder: ‘[0].articulo’ from ‘comentarios[0].articulo’</p>
+<p>que está pasando??<br>
+gracias!</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-197984" title="enlace a este comentario">10.09.2012 - 16:48</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-199628">
+<div class="wrap altt">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://1.gravatar.com/avatar/7014e8f18fe289c9576fb605f8a2e03b?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/7014e8f18fe289c9576fb605f8a2e03b"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-199628">43</a></div>
+<div class="autorcomentario">
+<strong>hulkorn</strong>
+</div>
+<p>Hola neosergio,<br>
+Se sale el curso, de verdad GRACIAS!!!!</p>
+<p>Ahora a lo que vamos, quiero que las s recetas me salgan en orden cronologico inverso, es decir, que me salga primero la ultima que he creado y asi sucesivamente, y tb, como hago para que se vean solo las 4 ultimas.</p>
+<p>Un saludo,</p>
+<p>hulk</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-199628" title="enlace a este comentario">12.11.2012 - 11:57</a>
+</small>
+</div>
+</div>
+</li> 
+<li class="comment" id="comment-200080">
+<div class="wrap ">
+<div class="leftarea">
+<img alt="" data-cfsrc="http://0.gravatar.com/avatar/22136c87c8532672aa7001c13d5537a1?s=40&amp;d=http%3A%2F%2Fwww.maestrosdelweb.com%2Fwp-content%2Fthemes%2Fmdw2%2Fimages%2Fno-avatar.gif%3Fs%3D40&amp;r=G" class="avatar avatar-40 photo" height="40" width="40" src="./Curso Django  Las Plantillas   Maestros del Web_files/22136c87c8532672aa7001c13d5537a1"></div>
+<div class="rightarea">
+<div class="numero"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-200080">44</a></div>
+<div class="autorcomentario">
+<strong><a href="http://www.notilab.com/" rel="external nofollow" class="url">Heraud</a></strong>
+</div>
+<p>Muchas muchas muchas. …. gracias por las guias @neosergio, estoy siguiendo el curso sin ningun problema, creo que me he enterado muy tarde de la fiesta jejeje estoy muy retrsado de los de mas compañerso que están al tanto<br>
+Una Preguntita<br>
+Estoy pensando aplicar esto en un proyecto (Sistema de factuaración y ventas) que lo he desarrollado anteriormente en Zend Framework y lo quiero llevar a Django, Crees que pueda lograrlo? lo quiero hacer con fines de Investigar y aprender más sobre Django.<br>
+Espero tu Sugerencias</p>
+<small class="commentmetadata"><a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#comment-200080" title="enlace a este comentario">24.11.2012 - 01:23</a>
+</small>
+</div>
+</div>
+</li> 
+</ol>
+</div>  
+<p class="enc_mensaje no-print">Los comentarios de este post están cerrados. Si quieres seguir la discusión, debatir,
+criticar, sugerir o expandir el tema te invitamos a hacerlo en tu propio blog, en twitter o donde puedas publicar.
+No olvides enlazar a este post para que sigamos la conversación y se genere un trackback.</p>
+</div>
+</section>
+</div>
+</div></section>
+<section><div class="areaVermas navFinalInternas"><div class="contenido">
+<a href="http://www.maestrosdelweb.com/" class="btnPortada"><span class="icono"></span>Ir a portada</a>
+<a href="http://www.maestrosdelweb.com/editorial/curso-django-las-plantillas/#container" class="btnIrArriba"><span class="icono"></span>Ir arriba</a>
+</div></div></section>
+<footer><div class="contenido">
+<div class="col mapaWeb">
+<h3>Nosotros</h3>
+<ul>
+<li><a href="http://www.maestrosdelweb.com/sitio/creditos/">Créditos</a></li>
+<li><a href="http://www.maestrosdelweb.com/sitio/correo">Contacto</a></li>
+<li><a href="http://www.maestrosdelweb.com/index.xml">Feed RSS</a></li>
+</ul>
+<h3>Proyectos</h3>
+<ul>
+<li><a href="http://www.forosdelweb.com/">Foros del web</a></li>
+<li><a href="http://mejorando.la/">Mejorando la web</a></li>
+<li><a href="http://www.120segundos.com/">120 Segundos</a></li>
+</ul>
+<h3>Legal</h3>
+<ul>
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es">Licencia CC del contenido</a></li>
+<li><a href="http://www.maestrosdelweb.com/politica-de-privacidad/">Política de privacidad</a></li>
+</ul>
+<h3>CMS</h3>
+<ul>
+<li><a href="http://wordpress.org/">Wordpress</a></li>
+</ul>
+</div>
+<div class="col">
+<h3>Acerca de Maestros del web</h3>
+<p>Maestros del Web está online desde 1997. Somos un espacio de apoyo y difusión del buen diseño y desarrollo web. Lideramos, reclutamos y educamos a los entusiastas de la web hispana.</p>
+<p><a href="http://www.maestrosdelweb.com/sitio/creditos">Leer más de Maestros del Web</a></p>
+</div>
+</div></footer>
+</div>
+
+
+ <iframe name="oauth2relay292971337" id="oauth2relay292971337" src="./Curso Django  Las Plantillas   Maestros del Web_files/postmessageRelay.htm" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><script id="twitter-csp-test"></script></body></html>

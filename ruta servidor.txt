@@ -1,0 +1,2 @@
+C:\Users\Ivan Galindo\Documents\django_projects\proeyecto1>python manage.py runs
+erver
